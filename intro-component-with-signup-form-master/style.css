@@ -30,7 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 200px;
+    padding: 100px;
     flex: 1 1 50%;
 }
 
