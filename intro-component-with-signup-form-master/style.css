@@ -55,7 +55,7 @@ body {
 }
 
 .section2 > button , .form-container > form > button {
-    width: 60%;
+    width: 75%;
     border: none;
     background: hsl(248, 32%, 49%);
     color: white;
@@ -87,7 +87,7 @@ body {
 }
 
 .form-container {
-    width: 60%;
+    width: 75%;
     margin-top: 30px;
     background: white;
     padding: 40px;
