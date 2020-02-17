@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navigation {
+    padding: 40px;
+}
+
+.navigation , .navigation > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation > div > div:nth-child(2) {
+    margin: 0 50px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+}
+
+.hero-container > img, .content > img {
+    width: 50%;
+}
+
+.hero {
+    padding-right: 150px;
+    color: hsl(243, 87%, 12%);
+}
+
+.hero > div:first-child {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.input-container > input, .input-container > button {
+    flex: 1 1 auto;
+    border-radius: 4px;
+    font-family: 'Raleway';
+}
+
+.input-container > input {
+    height: 40px;
+    padding: 10px;
+    border: 1px solid hsl(238, 22%, 44%);
+}
+
+.input-container > button {
+    margin-left: 10px;
+    color: white;
+    background: hsl(224, 93%, 58%);
+    border: none;
+    cursor: pointer;
+}
+
+.content-container {
+    background: url("./images/bg-curve-desktop.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 100px;
+}
+
+.content-container:after {
+    content: '';
+    position: absolute;
+    top: 75px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: hsl(240, 43%, 98%);
+    z-index: -1;
+}
+
+.content {
+    padding: 40px;
+    display: flex;
+    padding-top: 150px;
+    color: hsl(243, 87%, 12%);
+    padding-bottom: 100px;
+}
+
+.content > div > div:first-child {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.content > div > div:nth-child(2), .content > div > div:nth-child(3) {
+    padding-right: 20%;
+    margin-bottom: 15px;
+}
+
+.link-container {
+    display: inline-block;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid hsl(170, 45%, 43%);
+    padding-bottom: 3px;
+}
+
+.link > a {
+    color: hsl(170, 45%, 43%);
+    text-decoration: none;
+}
+
+.card-container {
+    padding: 20px;
+    border-radius: 4px;
+    width: 50%;
+    box-shadow: 1px 2px 10px 0px #ccc;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.quoted {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.quoted .image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 5px;
+}
+
+.quoted .image > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.quoted > .ceo {
+    font-size: 12px;
+}
+
+.quoted > .ceo > div:first-child {
+    font-weight: 700;
+}
+
+.early-access {
+    padding: 100px;
+    background: hsl(238, 22%, 44%);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.early-access > div {
+    width: 45%;
+}
+
+.early-access > div:first-child > div:first-child {
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.early-access > div:first-child > div:nth-child(2) {
+    padding-right: 20%;
+    color: hsl(240, 75%, 98%);
+    font-size: 14px;
+}
+
+.early-access > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.early-access input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: 'Raleway';
+    border: none;
+    box-shadow: 1px 2px 10px 0px darkslategray;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+.early-access button {
+    border-radius: 4px;
+    font-family: 'Raleway';
+    color: white;
+    background: hsl(224, 93%, 58%);
+    border: none;
+    height: 40px;
+    width: 200px;
+    box-shadow: 1px 2px 10px 0px darkslategray;
+    cursor: pointer;
+}
+
+.footer-container {
+    padding: 100px 50px;
+    background: hsl(243, 87%, 12%);
+    color: white;
+}
+
+.footer-container > img {
+    filter: brightness(0)invert(1);
+}
+
+.footer-container ul {
+    list-style: none;
+}
+
+.footer-container ul li{
+    margin: 10px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content li > img {
+    margin-right: 10px;
+    width: 14px;
+}
+
+.social-icons {
+    width: 25%;
+}
+
+.social-icons i{
+    font-size: 14px;
+    position: relative;
+    margin: 0 1px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.social-icons i:after {
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: 0px;
+    top: 3px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+
+.social-icons i:not(:first-child):after {
+    left: 3px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .navigation > img {
+        width: 25%;
+    }
+    .navigation > div > div:nth-child(2) {
+        margin: 0 10px;
+    }
+    .hero-container > img, .content > img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .hero-container, .content{
+        flex-direction: column-reverse;
+    }
+    .hero {
+        padding-right: 0;
+        text-align: center;
+    }
+    .input-container {
+        width: 100%;
+        flex-direction: column;
+    }
+    .input-container > button {
+        margin-left: 0px;
+        margin-top: 20px;
+        height: 40px;
+    }
+    .content {
+        padding-top: 70px;
+    }
+    .content > div > div:first-child {
+        text-align: center;
+        font-size: 18px;
+    }
+    .content > div > div:nth-child(2), .content > div > div:nth-child(3) {
+        padding-right: 0;
+        font-size: 15px;
+    }
+    .content .link-container {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+    .card-container {
+        width: 100%;
+    }
+    .early-access {
+        padding: 30px;
+        flex-direction: column;
+    }
+    .early-access > div {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .early-access > div:first-child > div:nth-child(2) {
+        padding-right: 0;
+    }
+    .early-access button {
+        width: 100%;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-container ul {
+        margin-top: 20px;
+    }
+    .social-icons {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
