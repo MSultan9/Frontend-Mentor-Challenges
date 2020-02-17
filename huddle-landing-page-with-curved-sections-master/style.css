@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navigation {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation > img {
+    width: 150px;
+}
+
+.navigation > button {
+    width: 120px;
+    height: 25px;
+    border-radius: 50px;
+    border: 1px solid hsl(322, 100%, 66%);
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    color: hsl(322, 100%, 66%);
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 200px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.hero-container > div:first-child {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.hero-container > div:nth-child(2) {
+    width: 50%;
+    margin: 20px auto;
+}
+
+.hero-container > button, .center > button {
+    width: 300px;
+    height: 40px;
+    border-radius: 50px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: hsl(322, 100%, 66%);
+    box-shadow: 1px 2px 10px 0px lightgray;
+    font-weight: 600;
+}
+
+.hero-container > img {
+    margin: 60px auto;
+}
+
+.hero-container > .numbers {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.hero-container > .numbers > div {
+    text-align: left;
+}
+
+.hero-container > .numbers > div > img {
+    width: 30px;
+}
+
+.hero-container > .numbers > div > div {
+    text-align: center;
+}
+
+.hero-container > .numbers > div > div:nth-child(2) {
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.hero-container > .numbers > div > div:nth-child(3) {
+    font-size: 14px;
+    color: gray 
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+section > img, section > div {
+    width: 40%;
+}
+
+section > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section > div > div:first-child, .center > div:first-child{
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+section.first {
+    background:hsl(207, 100%, 98%);
+}
+
+.curve-top {
+    width: 100%;
+    margin-bottom: -5px;
+    margin-top: 100px;
+}
+
+.curve-bottom {
+    width: 100%;
+    margin-bottom: 200px;
+}
+
+.center {
+    text-align: center;
+}
+
+.footer-container {
+    padding: 100px;
+    background: hsl(192, 100%, 9%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.footer-container > div {
+    width: 40%;
+}
+
+.footer-container > div > img {
+    filter: brightness(0)invert(1);
+    width: 150px;
+}
+
+.footer-container > div:first-child > div , .footer-container > div:nth-child(2) > div:nth-child(2) {
+    width: 75%;
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.footer-container > div:first-child > div > img{
+    margin-right: 10px;
+    width: 15px;
+}
+
+.footer-container > div:nth-child(2) > div:first-child {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    margin: 20px 0;
+}
+
+.input-container > input {
+    flex: 2 1 auto;
+    margin-right: 20px;
+    height: 40px;
+    padding: 10px;
+    border:none;
+    border-radius: 4px;
+}
+
+.input-container > button {
+    flex: 1 1 auto;
+    border-radius: 4px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    color: white;
+    background: hsl(322, 100%, 66%);
+    font-weight: 600;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 40px;
+}
+
+.social-icons > i:nth-child(2) {
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 1024px) {
+ .hero-container {
+     padding: 0 30px;
+ }
+ .hero-container > div:nth-child(2), .hero-container > img,
+ section > img, section > div, .footer-container > div,
+ .footer-container > div:first-child > div, 
+ .footer-container > div:nth-child(2) > div:nth-child(2) {
+    width: 100%;
+}
+.hero-container > .numbers {
+    flex-direction: column;
+    width: 50%;
+}
+.hero-container > .numbers > div {
+    margin-bottom: 10px;
+}
+section {
+    flex-direction: column-reverse;
+    padding: 0 30px;
+    text-align: center;
+}
+section > img, .footer-container > div {
+    margin-bottom: 40px;
+}
+section:not(.first) {
+    flex-direction: column;
+}
+.footer-container {
+    padding: 30px;
+    flex-direction: column-reverse;
+}
+.social-icons {
+    bottom: -20px;
+}
+}
