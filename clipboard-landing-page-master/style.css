@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: hsl(210, 10%, 33%);
+}
+
+.center {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header {
+    padding-top: 80px;
+    background: url("./images/bg-header-desktop.png");
+    background-repeat: round;
+}
+
+.header img {
+    width: 85px;
+    margin-bottom: 40px;
+}
+
+.header > div > div:nth-child(2), .section > div > div:nth-child(1),
+.content > div > div:first-child, .utilities > div > div:nth-child(2) {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.header > div > div:nth-child(3), .section > div > div:nth-child(2) {
+    padding: 0 50px;
+    font-size: 16px;
+    color: hsl(201, 11%, 66%);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.header button, .section button {
+    width: 180px;
+    height: 35px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Bai Jamjuree', sans-serif;
+    cursor: pointer;
+}
+
+.header > div > div > button:first-child, .section > div > div > button:first-child {
+    background: hsl(171, 66%, 44%);
+    box-shadow: 0px 3px 1px 0px hsl(171, 66%, 34%);
+}
+
+.header > div > div > button:first-child:hover, .section > div > div > button:first-child:hover {
+    background: hsl(171, 51%, 58%);
+}
+
+.header > div > div > button:nth-child(2), .section > div > div > button:nth-child(2) {
+    background: hsl(233, 100%, 69%);
+    box-shadow: 0px 3px 1px 0px hsl(233, 70%, 59%);
+}
+
+.header > div > div > button:nth-child(2):hover, .section > div > div > button:nth-child(2):hover {
+    background: hsl(233, 100%, 74%);
+}
+
+.section {
+    margin-top: 100px;
+}
+.section > div > div:nth-child(1) {
+    font-size: 22px;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    margin-top: 50px;
+}
+
+.content-container > img {
+    margin-left: -40px;
+}
+
+.content-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content > div {
+    margin-bottom: 40px;
+}
+
+.content > div > div:first-child, .utilities > div > div:nth-child(2) {
+    font-size: 18px;
+}
+
+.content > div > div:nth-child(2), .utilities > div > div:nth-child(3)  {
+    font-size: 16px;
+    color: hsl(201, 11%, 66%);
+    margin-top: 10px;
+    line-height: 30px;
+}
+
+.image-container {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.image-container > img {
+    width: 100%;
+}
+
+.utilities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    padding: 0 80px;
+    margin: 50px 0;
+}
+
+.utilities > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.utilities > div > div:nth-child(2) {
+    margin-top: 30px;
+}
+
+.companies {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 150px 0;
+}
+
+.footer-container {
+    margin-top: 150px;
+    padding: 50px;
+    background: hsl(201, 11%, 90%);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr
+}
+
+.footer-container > img {
+    width: 60px;
+    margin: 0 auto;
+}
+
+.footer-container > div:not(:last-child) {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container > div > div {
+    margin-bottom: 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.footer-container > div > div:hover {
+    color: hsl(171, 66%, 44%);
+}
+
+.footer-container > div:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.footer-container > div:last-child > svg:nth-child(2) {
+    margin: 0 20px;
+}
+
+.footer-container svg {
+    cursor: pointer;
+}
+
+.footer-container svg:hover path {
+    fill: hsl(171, 66%, 44%);
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        background-repeat: no-repeat;
+    }
+    .center {
+        width: 100%;
+    }
+    .header > div > div:nth-child(4) {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    .header > div > div:nth-child(4) > button{
+        width: 100%;
+        height: 45px;
+        margin-bottom: 20px;
+    }
+    .content-container, .utilities, .footer-container {
+        grid-template-columns: 1fr;
+    }
+    .content-container > img, .image-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 0 10px;
+    }
+    .content-container > div {
+        margin-top: 50px;
+        text-align: center;
+    }
+    .utilities, .header > div > div:nth-child(3), 
+    .section > div > div:nth-child(2)  {
+        padding: 0 10px;
+    }
+    .companies {
+        flex-direction: column;
+    }
+    .companies > img {
+        margin-bottom: 60px;
+    }
+    .section button {
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer-container {
+        text-align: center;
+        grid-gap: 20px;
+    }
+    .footer-container > div:last-child {
+        justify-content: center;
+    }
+}
