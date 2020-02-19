@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+.navigation {
+    padding: 30px 150px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation > div {
+    display: flex;
+    font-weight: 700;
+}
+
+.navigation > div > div {
+    padding: 10px 15px;
+    color: hsl(273, 4%, 51%);
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.navigation > div > div:last-child {
+    border: 2px solid hsl(270, 9%, 17%);
+    color: hsl(270, 9%, 17%);
+    margin-left: 30px;
+    padding: 10px 25px;
+}
+
+.navigation > div > div:hover {
+    color: hsl(270, 9%, 17%);
+}
+
+.navigation > div > div:last-child:hover {
+    background: hsl(270, 9%, 17%);
+    color: white;
+}
+
+#hamburger, #close {
+    display: none;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    padding: 150px;
+    padding-top: 100px;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 65%;
+    background: hsl(256, 26%, 20%);
+    z-index: -1;
+}
+
+.intro > div:first-child {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: start;
+}
+
+.intro > div:nth-child(2) {
+    margin: 0 auto;
+}
+.line {
+    width: 142px;
+    height: 1px;
+    background: hsl(273, 4%, 51%);
+    margin-bottom: 50px;
+}
+
+.intro > div > div:nth-child(2), .content > div:nth-child(2) {
+    font-size: 60px;
+    font-family: 'DM Serif Display', serif;
+    margin-bottom: 10px;
+}
+
+.intro button {
+    margin-top: 30px;
+    text-transform: uppercase;
+    width: 145px;
+    height: 40px;
+    font-family: 'Karla', sans-serif;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.intro button:hover, .find-more > button:hover {
+    background: white;
+    color: hsl(256, 26%, 20%)
+}
+
+.intro-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.intro-left {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+}
+
+.content {
+    padding: 0px 150px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50px 0;
+    grid-gap: 50px;
+}
+
+.cards-container > div > div:nth-child(2) {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+}
+
+.cards-container > div > div:nth-child(3) {
+    color: hsl(273, 4%, 51%);
+}
+
+.find-more {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: hsl(256, 26%, 20%);
+    color: white;
+    margin: 150px 0;
+    position: relative;
+}
+
+.find-more > div {
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+}
+
+.find-more > button {
+    width: 145px;
+    height: 40px;
+    text-transform: uppercase;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    font-family: 'Karla', sans-serif;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.find-more > img {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    pointer-events: none;
+}
+
+.footer-container {
+    padding: 30px 150px;
+    background: hsl(0, 0%, 98%);
+    position: relative;
+}
+
+.footer-container > .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+    border-bottom: 1px solid hsl(273, 4%, 51%);
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container > .header > div > svg {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.footer-container > .header > div > svg:hover path{
+    fill: black;
+}
+
+.footer-content {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    position: relative;
+    z-index: 1;
+}
+
+.footer-content > div > div {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.footer-content > div > div:hover {
+    text-decoration: underline;
+}
+
+.footer-content > div > div:first-child {
+    margin-bottom: 30px;
+    color: hsl(273, 4%, 51%);
+}
+
+.footer-patern {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .navigation, .footer-container {
+        padding: 30px;
+        position: relative;
+    }
+    .navigation > div:nth-child(2) {
+        display: none;
+    }
+    #hamburger{
+        display: block;
+    }
+    .intro {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+        padding-bottom: 100px;
+        overflow: hidden;
+    }
+    .intro > div:nth-child(2) > img{
+        width: 100%;
+    }
+    .intro .line {
+        display: none;
+    }
+    .intro > div:first-child {
+        text-align: center;
+        align-items: center;
+        padding: 100px 30px;
+    }
+    .intro-left {
+        left: 0;
+        top: 20%;
+        z-index: -1;
+    }
+    .intro-right {
+        right: -33%;
+        bottom: -15%;
+        top: auto;
+        z-index: -1;
+        width: 70%;
+    }
+    .intro > div > div:nth-child(2), .content > div:nth-child(2) {
+        font-size: 40px;
+        text-align: center;
+    }
+    .content {
+        padding: 0;
+    }
+    .content > .line {
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    .cards-container {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+    .cards-container > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .find-more {
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .find-more > div {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .find-more > img {
+        top: 0;
+        right: -50%;
+        height: 100%;
+        width: 100%;
+    }
+    .footer-patern {
+        width: 100%;
+    }
+    .footer-container{
+        padding-top: 80px;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header > div {
+        margin-top: 30px;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-content > div {
+        margin-bottom: 30px;
+    }
+    .navigation > div:nth-child(2).nav-mobile {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        padding: 30px;
+        background: hsl(256, 26%, 20%);
+    }
+    .navigation > .nav-mobile > div {
+        color: white;
+    }
+    .navigation > .nav-mobile > div:last-child {
+        border: 1px solid white;
+        color: white;
+        margin-left: 0px;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+}
