@@ -1,0 +1,639 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    color: white;
+    height: 40px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 150px;
+    align-items: center;
+    text-transform: uppercase;
+    color: hsl(229, 31%, 21%);
+    font-size: 14px;
+    position: relative;
+}
+
+.navigation > div {
+    display: flex;
+    align-items: center;
+}
+
+.navigation > div > div , .navigation > div > button {
+    margin: 0 30px;
+    cursor: pointer;
+}
+
+.navigation > div > div:hover {
+    color: hsl(0, 94%, 66%);
+}
+
+.navigation > div > button {
+    width: 120px;
+    background: hsl(0, 94%, 66%);
+}
+
+.navigation > div > button:hover,
+.footer-container form button:hover {
+    background: white;
+    color: hsl(0, 94%, 66%);
+    border: 1px solid hsl(0, 94%, 66%);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 150px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 90%;
+}
+
+.hero > div:first-child > div:first-child {
+    font-size: 40px;
+    color: hsl(229, 31%, 21%);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero > div:first-child > div:nth-child(2) {
+    color: hsl(229, 8%, 60%);
+    margin-bottom: 25px;
+}
+
+.hero > div img {
+    width: 100%;
+}
+
+.buttons-container > button {
+    width: 170px;
+    background: hsl(231, 69%, 60%);
+    box-shadow: 0px 2px 6px 0px hsl(231, 69%, 87%);
+}
+
+.buttons-container > button:nth-child(2) {
+    color: hsl(229, 8%, 60%);
+    background: hsl(0, 0%, 96%);
+    margin-left: 10px;
+}
+
+.buttons-container > button:first-child:hover,
+.cards-container button:hover {
+    background: white;
+    color: hsl(231, 69%, 60%);
+    border: 1px solid hsl(231, 69%, 60%);
+}
+
+.buttons-container > button:nth-child(2):hover {
+    background: white;
+    color: hsl(229, 31%, 21%);
+    border: 1px solid hsl(229, 31%, 21%);
+}
+
+.round-shape {
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    background: hsl(231, 69%, 60%);
+    right: -12.5%;
+    bottom: 0;
+    border-radius: 150px;
+    z-index: -1;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    margin: 100px auto;
+}
+
+.center > div:first-child {
+    color: hsl(229, 31%, 21%);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.center > div:nth-child(2) {
+    color: hsl(229, 8%, 60%)
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+}
+
+.tabs > div {
+    padding: 20px 40px;
+    color: hsl(229, 8%, 60%);
+    border-bottom: 3px solid transparent;
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tabs > div:hover {
+    color: hsl(0, 94%, 66%);
+}
+
+.tabs > div:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: hsl(229, 8%, 60%);
+    left: 0;
+    bottom: -3px;
+    opacity: 0.5;
+}
+
+.tabs > div.active {
+    border-bottom: 3px solid hsl(0, 94%, 66%);
+    color: hsl(229, 31%, 21%);
+}
+
+.tabs > div.active::after {
+    background: transparent;
+}
+
+.tabs-content {
+    margin: 80px 0;
+    padding: 0 150px;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.tabs-content > .round-shape {
+    right: auto;
+    left: -12.5%;
+}
+
+.tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.tab > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.tab > div:nth-child(1) {
+    height: 350px;
+}
+
+.tab > div:nth-child(1) > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.tab > div:nth-child(2) > .title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: hsl(229, 31%, 21%);
+    font-weight: 700;
+}
+
+.tab > div:nth-child(2) > .text {
+    margin-bottom: 20px;
+    color: hsl(229, 8%, 60%);
+    padding-right: 50px;
+}
+
+.tab button {
+    width: 120px;
+    text-transform: capitalize;
+    background: hsl(231, 69%, 60%);
+}
+
+#simple-image.show, #simple-title.show, #simple-text.show,
+#speedy-image.show, #speedy-title.show, #speedy-text.show,
+#easy-image.show, #easy-title.show, #easy-text.show {
+    display: block;
+}
+
+#simple-image.hide, #simple-title.hide, #simple-text.hide,
+#speedy-image.hide, #speedy-title.hide, #speedy-text.hide,
+#easy-image.hide, #easy-title.hide, #easy-text.hide {
+    display: none;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin-bottom: 150px;
+}
+
+.cards-container > div {
+    margin: 0 15px;
+    padding: 20px;
+    box-shadow: 0px 2px 6px 0px hsl(231, 69%, 87%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.cards-container > div:first-child {
+    align-self: flex-start;
+}
+
+.cards-container > div:last-child {
+    align-self: flex-end;
+}
+
+.cards-container > div > div:nth-child(2) {
+    color: hsl(229, 31%, 21%);
+    font-weight: 500;
+    margin: 30px 0;
+    margin-bottom: 10px;
+}
+
+.cards-container > div > div:nth-child(3) {
+    font-size: 14px;
+    color: hsl(229, 8%, 60%);
+}
+
+.cards-container > div > div:nth-child(4) {
+    margin: 20px -20px;
+}
+
+.cards-container > div > div:last-child {
+    width: 100%;
+}
+
+.cards-container button {
+    width: 100%;
+    background: hsl(231, 69%, 60%);
+    text-transform: capitalize;
+}
+
+.questions {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.questions > div {
+    padding: 20px 0;
+    border-bottom: 1px solid hsl(229, 8%, 90%);
+    color: hsl(229, 31%, 21%);
+    font-weight: 500;
+    overflow: hidden;
+    cursor: pointer;
+}
+.questions > div:hover {
+    color: hsl(0, 94%, 66%);
+}
+.questions > div:first-child {
+    border-top: 1px solid hsl(229, 8%, 90%);
+}
+.questions > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.questions svg {
+    margin-right: 20px;
+    transition: transform 0.5s;
+}
+
+.questions svg.open {
+    transform: rotate(180deg);
+}
+
+.questions svg.open path {
+    stroke: hsl(0, 94%, 66%);
+}
+
+.questions > div > .answer {
+    transform: scaleY(0);
+    height: 0;
+    font-size: 16px;
+    line-height: 30px;
+    color: hsl(229, 8%, 60%);
+    font-weight: 400;
+    transition: all 0.5s;
+}
+
+.questions > div > .answer.open {
+    transform: scaleY(1);
+    height: auto;
+    padding-top: 40px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button-container > button {
+    width: 120px;
+    background: hsl(231, 69%, 60%);
+    text-transform: capitalize;
+}
+
+.footer-container {
+    margin-top: 200px;
+}
+
+.footer-container > div:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    background: hsl(231, 69%, 60%);
+    color: white;
+}
+
+.footer-container > div:first-child > div:first-child{
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-container > div:first-child > div:nth-child(2){
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#form {
+    position: relative;
+}
+
+.footer-container form input{
+    height: 40px;
+    padding: 10px;
+    font-family: 'Rubik', sans-serif;
+    width: 300px;
+    border-radius: 8px;
+    border: none;
+    z-index: 1;
+    position: relative;
+}
+
+.footer-container form.error:after {
+    position: absolute;
+    content: "Whoops, make sure it's an email";
+    width: 302px;
+    height: 150%;
+    left: -1px;
+    top: -1px;
+    background: hsl(0, 94%, 66%);
+    z-index: 0;
+    border-radius: 8px;
+    color: white;
+    font-size: 10px;
+    text-align: left;
+    font-style: italic;
+    box-sizing: border-box;
+    padding-top: 45px;
+    padding-left: 10px;
+}
+
+.footer-container form button{
+    width: 120px;
+    margin-left: 10px;
+    background: hsl(0, 94%, 66%);
+    text-transform: capitalize;
+}
+
+.footer-container > div:nth-child(2){
+    padding: 30px 150px;
+    background: hsl(229, 31%, 21%);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    gap: 50px;
+}
+
+.footer-container > div:nth-child(2) > div{
+    display: flex;
+    align-items: center;
+}
+
+.footer-container > div:nth-child(2) > div > div:nth-child(2),
+.footer-container > div:nth-child(2) > div > svg:nth-child(2){
+    margin: 0 20px;
+}
+
+.footer-container > div:nth-child(2) > div > div,
+.footer-container > div:nth-child(2) > div > svg {
+    cursor: pointer;
+}
+
+.footer-container > div:nth-child(2) > div > div:hover {
+    color: hsl(0, 94%, 66%);
+}
+
+.footer-container > div:nth-child(2) > div > svg:hover path {
+    fill: hsl(0, 94%, 66%);
+}
+
+#close, #hamburger {
+    display: none;
+    z-index: 2;
+}
+
+@media screen and (max-width: 1024px) {
+    .navigation, .hero, .tabs-content,
+    .footer-container > div:nth-child(2) {
+        padding: 30px;
+    }
+    .navigation > div {
+        display: none;
+    }
+    .hero {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .hero > div:first-child {
+        width: 100%;
+        text-align: center;
+    }
+    .hero > div:first-child > div:first-child {
+        font-size: 30px;
+    }
+    .hero .buttons-container {
+        display: flex;
+    }
+    .round-shape {
+        height: 100px;
+        right: -50%;
+        height: 200px;
+        bottom: auto;
+        top: 70px;
+        width: 120%;
+    }
+    .center, .questions {
+        width: 90%;
+    }
+    .tabs {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tabs > div {
+        border-bottom: 1px solid hsl(229, 8%, 90%);
+    }
+    .tabs > div.active {
+        border-bottom: 1px solid hsl(229, 8%, 90%);
+    }
+
+    .tabs > div:after {
+        background: transparent;
+        height: 3px;
+        width: 50%;
+        opacity: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0px;
+    }
+    .tabs > div.active:after {
+        background: hsl(0, 94%, 66%);
+    }
+    .tab {
+        grid-template-columns: 1fr;
+    }
+    .tabs-content {
+        margin-top: 30px;
+    }
+    .tabs-content > .round-shape {
+        left: -50%;
+        top: 150px;
+    }
+    .tab > div:nth-child(2) {
+        align-items: center;
+        text-align: center;
+    }
+    .tab > div:nth-child(2) > .text {
+        padding-right: 0;
+    }
+    .tab > div:nth-child(2) > button {
+        display: none
+    }
+    .cards-container {
+        height: auto;
+        flex-direction: column;
+    }
+    .cards-container > div {
+        margin-bottom:  20px;
+    }
+
+    .cards-container > div:first-child,
+    .cards-container > div:last-child {
+        align-self: center;
+    }
+
+    #form > button {
+        margin-top: 20px;
+        width: 100%;
+        margin-left: 0;
+    }
+    .footer-container form.error:after {
+        width: 100%;
+        height: 60%;
+        left: 1px;
+        top: -3px;
+    }
+    .footer-container > div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-container > div:nth-child(2) > div:nth-child(2) {
+        margin: 30px 0;
+        flex-direction: column;
+    }
+    .footer-container > div:nth-child(2) > div:nth-child(2) > div {
+        margin: 10px 0;
+    }
+    #hamburger {
+        display: block;
+    }
+    .navigation > div.mobile-nav {
+        position: absolute;
+        top: 100px;
+        flex-direction: column;
+        width: 100%;
+        left: 0;
+        display: flex;
+        z-index: 2;
+        padding: 0 30px;
+    }
+    .navigation > div.mobile-nav > div{
+        padding: 20px 0;
+        color: white;
+        width: 100%;
+        border-bottom: 1px solid hsl(229, 8%, 90%);
+        text-align: center;
+    }
+    .navigation > div.mobile-nav > div:first-child{
+        border-top: 1px solid hsl(229, 8%, 90%);
+    }
+    .navigation > div.mobile-nav > button{
+        width: 100%;
+        color: white;
+        margin-top: 20px;
+        border: 1px solid white;
+        background: transparent;
+    }
+    .navigation.layer::after{
+        position: absolute;
+        content: "";
+        height: 100vh;
+        width: 100%;
+        background: hsl(229, 31%, 21%);
+        left: 0;
+        top: 0;
+        z-index: 1;
+        opacity: 0.95;
+    }
+    .navigation.layer svg {
+        z-index: 2;
+    }
+    .navigation.layer svg path {
+        fill: white;
+    }
+}
