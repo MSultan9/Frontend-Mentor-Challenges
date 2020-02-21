@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    gap: 50px;
+    padding: 30px 150px;
+    align-items: center;
+}
+
+.navigation > div:nth-child(n + 1) {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: hsl(257, 7%, 63%)
+}
+
+.navigation > div > div {
+    cursor: pointer;
+}
+
+.navigation > div > div:hover {
+    color: hsl(260, 8%, 14%);
+}
+
+.navigation > div:nth-child(2) > div:nth-child(2){
+    margin: 0 30px;
+}
+
+.navigation button {
+    color: white;
+    width: 100px;
+    height: 30px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 30px;
+    border-radius: 50px;
+    border: none;
+    background: hsl(180, 66%, 49%);
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin: 100px 0;
+}
+
+.intro img {
+    width: 100%;
+}
+
+.intro > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 150px;
+}
+
+.intro > div:first-child > div:first-child {
+    font-weight: 700;
+    font-size: 60px;
+    color: hsl(260, 8%, 14%);
+}
+
+.intro > div:first-child > div:nth-child(2) {
+    color: hsl(257, 7%, 63%);
+    padding-right: 50px;
+    margin-bottom: 30px;
+}
+
+.intro button, .bottom-banner > button {
+    width: 150px;
+    height: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: hsl(180, 66%, 49%);
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+}
+
+.content {
+    background: rgb(240,241,246);
+    padding: 100px 150px;
+    position: relative;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.center > div:first-child {
+    font-size: 32px;
+    font-weight: 700;
+    color: hsl(260, 8%, 14%);
+    margin-bottom: 5px;
+}
+
+.center > div:nth-child(2) {
+    width: 50%;
+    color: hsl(257, 7%, 63%)
+}
+
+.cards-container {
+    margin: 50px 0;
+    display: flex;
+    height: 360px;
+    align-items: center;
+    position: relative;
+}
+
+.cards-container > div {
+    background: white;
+    padding: 30px;
+    padding-top: 80px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.cards-container > div:first-child {
+    align-self: flex-start;
+}
+
+.cards-container > div:nth-child(3) {
+    align-self: flex-end;
+}
+
+.cards-container > div:nth-child(2) {
+    margin: 0 20px;
+}
+
+.cards-container > div > div:first-child {
+    position: absolute;
+    top: -40px;
+    border-radius: 50%;
+    background: hsl(257, 27%, 26%);
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-container > div > div:nth-child(2) {
+    color: hsl(260, 8%, 14%);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cards-container > div > div:nth-child(3) {
+    color: hsl(257, 7%, 63%);
+    font-size: 16px;
+}
+
+.cards-container .line {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    z-index: 0;
+    padding: 0;
+    background: hsl(180, 66%, 49%);
+}
+
+.bottom-banner {
+    padding: 50px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("./images/bg-shorten-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 27%, 26%);
+    color: white;
+}
+
+.bottom-banner > div:first-child {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-container {
+    padding: 50px 150px;
+    background: hsl(260, 8%, 14%);
+    color: white;
+    display: grid;
+    font-size: 16px;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+}
+
+.footer-container > div > div {
+    margin-bottom: 10px;
+    color: hsl(257, 7%, 63%);
+    cursor: pointer;
+}
+.footer-container > div > div:hover {
+    color: hsl(180, 66%, 49%);
+}
+
+.footer-container > div > div:first-child {
+    margin-bottom: 30px;
+    color: white;
+    cursor: default;
+}
+
+.footer-container > div:last-child > svg {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.footer-container > div:last-child > svg:hover path{
+    fill: hsl(180, 66%, 49%);
+}
+
+.input-container {
+    position: absolute;
+    width: calc(100% - 300px);
+    top: -60px;
+    padding: 50px;
+    background: url("./images/bg-shorten-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 27%, 26%);
+    border-radius: 8px;
+}
+
+.input-container > form {
+    display: flex;
+    position: relative;
+}
+
+.input-container > form > input {
+    flex: 1 1 auto;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-container > form > button {
+    margin-left: 20px;
+    width: 150px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: hsl(180, 66%, 49%);
+    border: none;
+}
+
+button:hover, .input-container button:hover,
+.links-container > div > div:nth-child(2) > button:hover {
+    background: hsl(180, 66%, 69%);
+}
+
+.links-container > div {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.links-container > div > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links-container > div > div:nth-child(2) > div {
+    color: hsl(180, 66%, 49%);
+    margin-right: 20px;
+}
+
+.links-container > div > div:nth-child(2) > button {
+    width: 100px;
+    height: 35px;
+    color: white;
+    background: hsl(180, 66%, 49%);
+    border-radius: 8px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+#form.error:after {
+    content: "Please add a link";
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+    font-size: 12px;
+    font-style: italic;
+    color: hsl(0, 87%, 67%);
+}
+
+#form.error input {
+    border: 2px solid hsl(0, 87%, 67%);
+}
+
+.links-container > div > div:nth-child(2) > button.copied {
+    background: hsl(257, 27%, 26%);
+}
+
+#hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .navigation, .input-container, .content, .footer-container {
+        padding: 30px;
+    }
+    .navigation > div:nth-child( n + 1) {
+        display: none;
+    }
+    .intro{
+        display: flex;
+        flex-direction: column-reverse;
+        overflow: hidden;
+    }
+    .intro img {
+        transform: translateX(50px);
+    }
+    .intro > div:first-child {
+        padding: 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .intro > div:first-child > div:first-child {
+        font-size: 40px;
+    }
+    .intro > div:first-child > div:nth-child(2) {
+        padding-right: 0;
+    }
+    .input-container {
+        width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .input-container > form {
+        flex-direction: column;
+    }
+    .input-container > form button {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 5px;
+        height: 40px;
+    }
+    .content {
+        padding-top: 100px;
+    }
+    .links-container > div,.links-container > div > div:nth-child(2) {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .links-container > div > div:nth-child(2) > button, 
+    .center > div:nth-child(2) {
+        width: 100%;
+    }
+    .links-container > div > div:first-child {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        border-bottom: 1px solid hsl(257, 7%, 63%);
+    }
+    .links-container > div > div:nth-child(2) > div {
+        margin-bottom: 5px;
+    }
+    .cards-container {
+        height: auto;
+        flex-direction: column;
+    }
+    .cards-container > div:nth-child(2) {
+        margin: 100px 0;
+    }
+    .cards-container > div > div:first-child {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .cards-container > div {
+        text-align: center;
+    }
+    .cards-container .line {
+        width: 10px;
+        height: 100%;
+    }
+    .bottom-banner {
+        padding: 100px 30px;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-container > svg {
+        margin: 30px auto;
+    }
+    .navigation {
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+    }
+    #hamburger {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    #hamburger > div {
+        height: 2px;
+        width: 20px;
+        background: black;
+        margin-bottom: 4px;
+    }
+    .navigation.mobile-nav > div:nth-child(2), .navigation.mobile-nav > div:nth-child(3) {
+        display: block;
+        position: absolute;
+        width: 90%;
+        text-align: center;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: hsl(257, 27%, 26%);
+        padding: 30px;
+        z-index: 10;
+    }
+    .navigation.mobile-nav > div:nth-child(2) > div,  navigation.mobile-nav > div:nth-child(2) > div:nth-child(2){
+        margin: 0;
+        margin-bottom: 20px;
+        color: white;
+        font-weight: 700;
+    }
+    .navigation.mobile-nav > div:nth-child(2) > div:nth-child(3){
+        border-bottom: 1px solid hsl(257, 7%, 63%);
+        padding-bottom: 30px;
+    }
+    .navigation.mobile-nav > div:nth-child(3){
+        top: calc(100% + 185px);
+    }
+    .navigation.mobile-nav > div:nth-child(3) > div{
+        color: white;
+        font-weight: 700;
+    }
+    .navigation > div:nth-child(3) > button{
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+}
