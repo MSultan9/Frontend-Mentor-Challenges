@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="scoreboard">
+      <div>
+        <div>Rock</div>
+        <div>Paper</div>
+        <div>Scissors</div>
+        <div>Lizard</div>
+        <div>Spock</div>
+      </div>
+      <div>
+        <div>Score</div>
+        <div id="score">0</div>
+      </div>
+    </div>
+    <div class="game">
+      <div>
+        <div id="option1">
+          <img src="./images/icon-scissors.svg" alt="scissors">
+        </div>
+      </div>
+      <div>
+        <div id="option2">
+          <img src="./images/icon-paper.svg" alt="paper">
+        </div>
+      </div>
+      <div>
+        <div id="option3">
+          <img src="./images/icon-rock.svg" alt="rock">
+        </div>
+      </div>
+      <div>
+        <div id="option4">
+          <img src="./images/icon-lizard.svg" alt="lizard">
+        </div>
+      </div>
+      <div>
+        <div id="option5">
+          <img src="./images/icon-spock.svg" alt="spock">
+        </div>
+      </div>
+      <div class="pentagon">
+        <img src="./images/bg-pentagon.svg" alt="pentagon">
+      </div>
+    </div>
+    <div class="match hide">
+      <div class="pick">
+        <div>You Picked</div>
+        <div class="emptyPick"></div>
+        <div id="myPick">
+          <img src="./images/icon-scissors.svg" alt="scissors">
+        </div>
+      </div>
+      <div class="result hide">
+        <div>You Lose</div>
+        <button id="reset">Play Again</button>
+      </div>
+      <div class="pick">
+        <div>The House Picked</div>
+        <div class="emptyPick"></div>
+        <div id="housePick" class="appear">
+          <img src="./images/icon-paper.svg" alt="paper">
+        </div>
+      </div>
+    </div>
+    <div class="button-container">
+      <button id="rules">Rules</button>
+    </div>
+    <div class="modal-container">
+      <div class="modal">
+        <div>
+          <div>Rules</div>
+          <img src="./images/icon-close.svg" id="close" alt="close">
+        </div>
+        <img src="./images/image-rules-bonus.svg" alt="rules">
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/MSultan9" target="_blank">Mohamad Sultan</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
